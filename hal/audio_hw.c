@@ -2416,6 +2416,7 @@ static int in_set_parameters(struct audio_stream *stream, const char *kvpairs)
     if (!parms)
         goto error;
     lock_input_stream(in);
+
     pthread_mutex_lock(&adev->lock);
 
     err = str_parms_get_str(parms, AUDIO_PARAMETER_STREAM_INPUT_SOURCE, value, sizeof(value));
