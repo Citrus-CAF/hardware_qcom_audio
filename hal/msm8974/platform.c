@@ -994,7 +994,11 @@ static void set_platform_defaults(struct platform_data * my_data)
     backend_table[SND_DEVICE_OUT_HEADPHONES] = strdup("headphones");
     backend_table[SND_DEVICE_OUT_HEADPHONES_44_1] = strdup("headphones-44.1");
 
-    my_data->max_mic_count = PLATFORM_DEFAULT_MIC_COUNT;
+    if(is_external_codec) {
+        my_data->max_mic_count = PLATFORM_DEFAULT_EXTERNAL_CODEC_MIC_COUNT;
+    } else {
+        my_data->max_mic_count = PLATFORM_DEFAULT_MIC_COUNT;
+    }
      /*remove ALAC & APE from DSP decoder list based on software decoder availability*/
      for (count = 0; count < sizeof(dsp_only_decoders_mime)/sizeof(dsp_only_decoders_mime[0]);
             count++) {
@@ -4418,6 +4422,11 @@ done:
 int platform_get_wsa_mode (void *adev)
 {
     return 0;
+}
+
+int platform_get_max_mic_count(void *platform) {
+    struct platform_data *my_data = (struct platform_data *)platform;
+    return my_data->max_mic_count;
 }
 
 int platform_set_snd_device_name(snd_device_t device, const char *name)
