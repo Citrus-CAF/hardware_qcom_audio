@@ -1,6 +1,6 @@
 ##AUDIO_FEATURE_FLAGS
 BOARD_USES_ALSA_AUDIO := true
-BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_SUPPORTS_SOUND_TRIGGER := false
 BOARD_USES_SRS_TRUEMEDIA := false
 #
 
@@ -9,14 +9,14 @@ FIPS_ENABLED := true
 
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 AUDIO_FEATURE_ENABLED_VBAT_MONITOR := true
-AUDIO_FEATURE_ENABLED_VOICE_CONCURRENCY :=true
+AUDIO_FEATURE_ENABLED_VOICE_CONCURRENCY := true
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 USE_CUSTOM_AUDIO_POLICY := 1
 #AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := true
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
 AUDIO_FEATURE_ENABLED_EXTN_FLAC_DECODER := true
-AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := true
+AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := false
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 AUDIO_FEATURE_ENABLED_FLUENCE := true
 AUDIO_FEATURE_ENABLED_HFP := true
@@ -33,7 +33,7 @@ AUDIO_FEATURE_ENABLED_WMA_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 AUDIO_FEATURE_ENABLED_SPKR_PROTECTION := true
-AUDIO_FEATURE_ENABLED_SSR := true
+AUDIO_FEATURE_ENABLED_SSR := false
 #AUDIO_FEATURE_ENABLED_MULTIPLE_TUNNEL := true
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 AUDIO_FEATURE_ENABLED_NT_PAUSE_TIMEOUT := true
@@ -58,7 +58,7 @@ AUDIO_FEATURE_ENABLED_AUDIOSPHERE := true
 ##AUDIO_FEATURE_FLAGS
 #
 AUDIO_FEATURE_ENABLED_HDMI_SPK := true
-AUDIO_FEATURE_ENABLED_EXT_HDMI := true
+AUDIO_FEATURE_ENABLED_EXT_HDMI := false
 AUDIO_FEATURE_ENABLED_HDMI_EDID := true
 ##not supported feature
 #AUDIO_FEATURE_ENABLED_CUSTOMSTEREO := true
@@ -106,7 +106,6 @@ PRODUCT_COPY_FILES += \
     hardware/qcom/audio/configs/msm8952_32/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     hardware/qcom/audio/configs/msm8952_32/mixer_paths_wcd9330.xml:system/etc/mixer_paths_wcd9330.xml \
     hardware/qcom/audio/configs/msm8952_32/mixer_paths_wcd9335.xml:system/etc/mixer_paths_wcd9335.xml \
-    hardware/qcom/audio/configs/msm8952_32/mixer_paths_wcd9326.xml:system/etc/mixer_paths_wcd9326.xml \
     hardware/qcom/audio/configs/msm8952_32/mixer_paths_qrd_skun.xml:system/etc/mixer_paths_qrd_skun.xml \
     hardware/qcom/audio/configs/msm8952_32/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     hardware/qcom/audio/configs/msm8952_32/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
