@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
     hardware/qcom/audio/configs/msm8952_32/mixer_paths_wcd9335.xml:system/etc/mixer_paths_wcd9335.xml \
     hardware/qcom/audio/configs/msm8952_32/mixer_paths_qrd_skun.xml:system/etc/mixer_paths_qrd_skun.xml \
     hardware/qcom/audio/configs/msm8952_32/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    hardware/qcom/audio/configs/msm8952_32/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
+   # hardware/qcom/audio/configs/msm8952_32/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     hardware/qcom/audio/configs/msm8952_32/sound_trigger_mixer_paths_wcd9335.xml:system/etc/sound_trigger_mixer_paths_wcd9335.xml \
     hardware/qcom/audio/configs/msm8952_32/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     hardware/qcom/audio/configs/msm8952_64/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt
