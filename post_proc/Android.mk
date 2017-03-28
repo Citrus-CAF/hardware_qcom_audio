@@ -48,8 +48,11 @@ LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_C_INCLUDES := \
 	external/tinyalsa/include \
-        $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
-	$(call include-path-for, audio-effects)
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
+    $(call include-path-for, audio-effects)
+
+LOCAL_HEADER_LIBRARIES += libhardware_headers
+LOCAL_HEADER_LIBRARIES += libsystem_headers
 
 ifneq ($(call is-board-platform-in-list, msm8916),true)
  include $(BUILD_SHARED_LIBRARY)
