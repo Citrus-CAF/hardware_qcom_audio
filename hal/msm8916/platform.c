@@ -3429,6 +3429,7 @@ int platform_set_channel_map(void *platform, int ch_count, char *ch_map, int snd
               __func__, ret, ch_count);
     }
     return ret;
+}
 
 static unsigned int get_best_backend_sample_rate(unsigned int sample_rate) {
 
