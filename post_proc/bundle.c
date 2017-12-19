@@ -39,6 +39,8 @@
 //#define LOG_NDEBUG 0
 
 #include <pthread.h>
+#include <unistd.h>
+
 #include <cutils/list.h>
 #include <cutils/log.h>
 #include <system/thread_defs.h>
