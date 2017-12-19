@@ -56,7 +56,8 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-#include <cutils/log.h>
+#include <sys/ioctl.h>
+#include <log/log.h>
 #include <tinyalsa/asoundlib.h>
 #include <sound/audio_effects.h>
 #include <sound/devdep_params.h>
