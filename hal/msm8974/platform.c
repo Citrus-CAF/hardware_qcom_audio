@@ -30,7 +30,9 @@
 #include <stdlib.h>
 #include <dlfcn.h>
 #include <fcntl.h>
+#include <pthread.h>
 #include <sys/ioctl.h>
+#include <unistd.h>
 #include <cutils/log.h>
 #include <cutils/properties.h>
 #include <cutils/str_parms.h>
@@ -1669,7 +1671,7 @@ static void audio_hwdep_send_cal(struct platform_data *plat_data)
     plat_data->hw_dep_fd = fd;
 }
 
-const char * get_snd_card_name_for_acdb_loader(const char *snd_card_name) {
+const char * platform_get_snd_card_name_for_acdb_loader(const char *snd_card_name) {
 
     if(snd_card_name == NULL)
         return NULL;
@@ -1701,7 +1703,7 @@ static int platform_acdb_init(void *platform)
     }
 
     snd_card_name = mixer_get_name(my_data->adev->mixer);
-    snd_card_name = get_snd_card_name_for_acdb_loader(snd_card_name);
+    snd_card_name = platform_get_snd_card_name_for_acdb_loader(snd_card_name);
 
     if (my_data->acdb_init_v3) {
         result = my_data->acdb_init_v3(snd_card_name, cvd_version,
