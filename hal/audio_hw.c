@@ -53,6 +53,8 @@
 #include <dlfcn.h>
 #include <sys/resource.h>
 #include <sys/prctl.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
 
 #include <log/log.h>
 #include <cutils/str_parms.h>
