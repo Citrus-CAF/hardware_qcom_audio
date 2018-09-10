@@ -311,8 +311,6 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_VENDOR_MODULE := true
 
-LOCAL_CFLAGS += -Werror
-
 include $(BUILD_SHARED_LIBRARY)
 
 endif
